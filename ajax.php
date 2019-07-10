@@ -16,14 +16,20 @@ if (empty($_POST['command'])) {
     echo "Command is not valid !";
     exit();
 }
+if(is_array($_POST['command']))
+{
+    echo "Command is not valid !";
+    exit();
+}
+
 $result = 'No have result!';
 try {
     $conn = new SoapClient(NULL, array(
         'location' => 'http://' . $soap_connection_info['soap_host'] . ':' . $soap_connection_info['soap_port'] . '/',
         'uri' => $soap_connection_info['soap_uri'],
         'style' => SOAP_RPC,
-        'login' => $soap_connection_info['soap_username'],
-        'password' => $soap_connection_info['soap_password']
+        'login' => $soap_connection_info['soap_user'],
+        'password' => $soap_connection_info['soap_pass']
     ));
     $result = $conn->executeCommand(new SoapParam($_POST['command'], 'command'));
     unset($conn);
@@ -37,4 +43,11 @@ try {
         $result = 'There is no such command!';
     }
 }
-echo $result;
+$paragraphs = '';
+foreach (explode("\n", $result) as $line) {
+    if (trim($line)) {
+        $paragraphs .= '<p>' . $line . '</p>';
+    }
+}
+
+echo $paragraphs;

@@ -11,7 +11,7 @@ include 'config.php';
 if (!empty($_SESSION["CM_Login"])) {
     header('location:./terminal.php');
     exit();
-} elseif (!empty($_POST['username'] || $_POST['password'])) {
+} elseif (!empty($_POST['username']) || !empty($_POST['password'])) {
     if (strtoupper($admin_username) == strtoupper($_POST['username']) || $admin_password == $_POST['password']) {
         $_SESSION["CM_Login"] = 1;
         header('location:./terminal.php');
