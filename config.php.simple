@@ -1,0 +1,38 @@
+<?php
+/**
+ * @author       Amin Mahmoudi (MasterkinG)
+ * @copyright    Copyright (c) 2019 - 2022, MsaterkinG32 Team, Inc. (https://masterking32.com)
+ * @link         https://masterking32.com
+ * @Github       https://github.com/masterking32/wow-telegram
+ * @Description  It's not masterking32 framework !
+ */
+
+session_start();
+
+define('Debug_Mode', false); // Change it to true if want enable debug mode.
+/**
+ * Your soap connection information
+ */
+$soap_connection_info = array(
+    'soap_uri' => 'urn:TC',
+    'soap_host' => '127.0.0.1',
+    'soap_port' => '7878',
+    'soap_user' => 'admin',
+    'soap_pass' => 'password',
+);
+
+$admin_username = 'admin';
+$admin_password = '1234';
+
+
+if (!empty(Debug_Mode)) {
+    @error_reporting(-1);
+    @ini_set('display_errors', 1);
+} else {
+    @ini_set('display_errors', 0);
+    if (version_compare(PHP_VERSION, '5.3', '>=')) {
+        @error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
+    } else {
+        @error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_USER_NOTICE);
+    }
+}
