@@ -24,6 +24,9 @@ $soap_connection_info = array(
 $admin_username = 'admin';
 $admin_password = '1234';
 
+$enable_recaptcha = false;
+$recaptcha_key = 'https://google.com/recaptcha';
+$recaptcha_secret = 'https://google.com/recaptcha';
 
 if (!empty(Debug_Mode)) {
     @error_reporting(-1);
