@@ -7,7 +7,7 @@ Support : [AzerothCore](http://azerothcore.org) and [TrinityCore](http://Trinity
 # Installation
 
  - Download project & unzip.
- - Go to `application/config/` folder and change `config.php.sample` file name to `config.php`
+ - Change `config.php.sample` file name to `config.php`
  - Open config file and set your server data.
  - Enjoy that.
 
