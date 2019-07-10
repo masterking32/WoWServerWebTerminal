@@ -17,6 +17,7 @@ Support : [AzerothCore](http://azerothcore.org) and [TrinityCore](http://Trinity
 
 
 ![Login](https://raw.githubusercontent.com/masterking32/WoWServerWebTerminal/master/screenshots/Screenshot_1.png)
+![Login With Recaptcha](https://raw.githubusercontent.com/masterking32/WoWServerWebTerminal/master/screenshots/Screenshot_4.png)
 ![Main](https://raw.githubusercontent.com/masterking32/WoWServerWebTerminal/master/screenshots/Screenshot_2.png)
 ![Command](https://raw.githubusercontent.com/masterking32/WoWServerWebTerminal/master/screenshots/Screenshot_3.png)
 
